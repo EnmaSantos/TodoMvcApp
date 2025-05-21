@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Diagnostics; // Added for IExceptionHandlerFeature
 using TodoMvcApp.Models;
 
 namespace TodoMvcApp.Controllers;
@@ -23,9 +24,10 @@ public class HomeController : Controller
         return View();
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    // Removed [ResponseCache] attribute as it's not in the instructions for this specific Error action
     public IActionResult Error()
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        var exceptionFeature = HttpContext.Features.Get<IExceptionHandlerFeature>();
+        return View(exceptionFeature); // Pass the exception feature to the view
     }
 }
