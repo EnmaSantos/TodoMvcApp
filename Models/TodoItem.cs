@@ -1,6 +1,8 @@
-using System.ComponentModel.DataAnnotations; // Add this line
+using System.ComponentModel.DataAnnotations;
 
-public class TodoItem
+namespace TodoMvcApp.Models
+{
+    public class TodoItem
 {
     public int Id { get; set; }
 
@@ -9,5 +11,6 @@ public class TodoItem
     public string Title { get; set; }
 
     public string Description { get; set; } // Assuming this was already here
-    public bool IsDone { get; set; }        // Assuming this was already here
+    public bool IsDone { get; set; }
+    }
 }

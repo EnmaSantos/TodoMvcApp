@@ -95,3 +95,4 @@
 /Users/enmanueldelossantoscruz/Library/CloudStorage/OneDrive-BYU-Idaho/Spring 2025/TodoMvcApp/obj/Debug/net9.0/TodoMvcApp.pdb
 /Users/enmanueldelossantoscruz/Library/CloudStorage/OneDrive-BYU-Idaho/Spring 2025/TodoMvcApp/obj/Debug/net9.0/TodoMvcApp.genruntimeconfig.cache
 /Users/enmanueldelossantoscruz/Library/CloudStorage/OneDrive-BYU-Idaho/Spring 2025/TodoMvcApp/obj/Debug/net9.0/ref/TodoMvcApp.dll
+/Users/enmanueldelossantoscruz/Library/CloudStorage/OneDrive-BYU-Idaho/Spring 2025/TodoMvcApp/obj/Debug/net9.0/TodoMvcApp.sourcelink.json
