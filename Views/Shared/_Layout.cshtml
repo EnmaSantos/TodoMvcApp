@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="~/TodoMvcApp.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <nav class="navbar navbar-expand navbar-light bg-light mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-controller="Todo" asp-action="Index">To-Do App</a>
+            <div class="navbar-nav">
+                <a class="nav-link" asp-controller="Todo" asp-action="Index">Home</a>
+                <a class="nav-link" asp-controller="Todo" asp-action="Create">Add Task</a>
+            </div>
+        </div>
+    </nav>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -45,6 +54,9 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+        // Potentially other scripts here
+    }
 </body>
 </html>

@@ -1,0 +1,28 @@
+@model List<TodoMvcApp.Models.TodoItem>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<h2>To-Do List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Completed</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@(item.IsDone ? "✅" : "❌")</td>
+        </tr>
+    }
+    </tbody>
+</table>
