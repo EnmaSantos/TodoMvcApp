@@ -1,0 +1,6 @@
+﻿@model Microsoft.AspNetCore.Diagnostics.ExceptionHandlerFeature
+
+<h1>Oops! Something went wrong.</h1>
+<p>An error occurred while processing your request.</p>
+<p><strong>Error:</strong> @Model?.Error?.Message</p>
+<a asp-action="Index" asp-controller="Todo">Back to Home</a>

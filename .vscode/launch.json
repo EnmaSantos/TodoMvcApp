@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // IMPORTANT: You'll likely need to adjust the 'program' path below.
+            // Replace <target-framework> with your project's target framework
+            // (e.g., net6.0, net7.0, net8.0).
+            // Replace <project-name>.dll with your project's DLL name (e.g., TodoMvcApp.dll).
+            "program": "${workspaceFolder}/bin/Debug/net9.0/TodoMvcApp.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "Attach to .NET Core Process",
+            "type": "coreclr",
+            "request": "attach"
+        }
+        // You can keep your Chrome launch configuration if you also want to debug client-side JS
+        // just make sure it's a separate entry in this "configurations" array. For example:
+        // ,
+        // {
+        //     "type": "chrome",
+        //     "request": "launch",
+        //     "name": "Launch Chrome against localhost",
+        //     "url": "http://localhost:5256", // Ensure this port matches your app's port
+        //     "webRoot": "${workspaceFolder}"
+        // }
+    ]
+}
